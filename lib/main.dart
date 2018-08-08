@@ -106,6 +106,15 @@ class RandomWordsState extends State<RandomWords> {
                 pair.asPascalCase,
                 style: _biggerFont,
               ),
+              trailing: Icon(
+                Icons.favorite,
+                color: Colors.red,
+              ),
+              onTap: () {
+                setState(() {
+                  _saved.remove(pair);
+                });
+              },
             );
           });
           final divided = ListTile
